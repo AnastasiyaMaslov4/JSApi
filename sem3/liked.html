@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Понравившиеся фото</title>
+    <style>
+        .liked_photos_list {
+            width: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 16px;
+            margin: 0 auto;
+        }
+
+        .img_div {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .random_photo {
+            max-height: 100%;
+            width: auto;
+        }
+
+        .likes_div {
+            display: flex;
+            justify-content: end;
+        }
+
+        .like_btn {
+            border: none;
+            background-color: transparent;
+        }
+
+        .like_svg {
+            width: 40px;
+            transition: all 0.3s;
+        }
+
+        .like_btn:hover .like_svg_path {
+            fill: red;
+        }
+
+        .active_like {
+            fill: red;
+        }
+    </style>
+</head>
+<body>
+    <main class="liked_photos_list">
+
+    </main>
+    <button class="get_back_btn">Вернуться назад</button>
+    <script src="assets/renderList.js"></script>
+</body>
+</html>

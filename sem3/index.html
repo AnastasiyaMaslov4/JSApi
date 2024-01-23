@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фото дня</title>
+    <style>
+        .main {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 16px;
+            margin: 0 auto;
+        }
+
+        .img_div {
+            height: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .random_photo {
+            max-height: 100%;
+            width: auto;
+        }
+
+        .likes_div {
+            display: flex;
+            justify-content: end;
+        }
+
+        .like_btn {
+            border: none;
+            background-color: transparent;
+        }
+
+        .like_svg {
+            width: 40px;
+            transition: all 0.3s;
+        }
+
+        .like_btn:hover .like_svg_path {
+            fill: red;
+        }
+
+        .active_like {
+            fill: red;
+        }
+    </style>
+</head>
+<body>
+    <main class="main">
+        <div class="img_div">
+            <img src="" alt="random photo" class="random_photo">
+        </div>
+        <h2 class="author_name"></h2>
+        <div class="likes_div">
+            <button class="like_btn"><svg class="like_svg" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path class="like_svg_path" d="M725.333333 192c-89.6 0-168.533333 44.8-213.333333 115.2C467.2 236.8 388.266667 192 298.666667 192 157.866667 192 42.666667 307.2 42.666667 448c0 253.866667 469.333333 512 469.333333 512s469.333333-256 469.333333-512c0-140.8-115.2-256-256-256z" fill="#FFCDD2"></path></g></svg></button>
+            <p class="likes_count"></p>
+        </div>
+        <button class="previous_btn">Смотреть предыдущее фото</button>
+        <button class="next_btn">Новое фото</button>
+        <button class="show_liked_photos_btn">Смотреть понравившиеся</button>
+    </main>
+    <script src="assets/script.js"></script>
+</body>
+</html>
